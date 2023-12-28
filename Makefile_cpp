@@ -22,10 +22,10 @@ WHITE = \033[1;97m
 ########## SOURCES
 SRCS	=	.cpp
 
-OBJS	=	$(SRCS:.c=.o)
+OBJS	=	$(SRCS:.cpp=.o)
 
-.c.o:
-		@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+.cpp.o:
+		@$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 		@echo "$(MAGENTA)Compilation of : $<..$(DEF_COLOR)"
 
 ########################################
@@ -44,8 +44,6 @@ clean:
 fclean: 	clean
 				@$(RM) $(NAME)
 				@echo "$(RED)rm of $(NAME).$(DEF_COLOR)"
-
-
 
 re:			fclean all
 
