@@ -3,7 +3,7 @@
 
 NAME		=
 CC			= c++
-INCLUDES	=
+INCLUDES	= -I ./
 CFLAGS		= -Wall -Wextra -Werror -std=c++98 $(INCLUDES)
 RM			= rm -f
 
